@@ -32,6 +32,9 @@ app.get('/help', (req, res) => {
   res.render('help', {title: 'Help'})
 })
 
+app.get('*', (req, res) => {
+  res.render('404', {title: 'Error 404'})
+})
 
 
 
