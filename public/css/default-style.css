@@ -1,0 +1,23 @@
+h1 {
+  color: grey;
+}
+
+header {
+  padding-left: 5rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+footer {
+  padding: 1rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: blue;
+  color: white;
+}
