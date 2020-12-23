@@ -1,4 +1,5 @@
-# Weather-app-learning-project-
+# Weather app (learning mini-project)
+
 (to complete) 
 
 Main learning goal -
