@@ -1,15 +1,22 @@
 <!DOCTYPE html>
+<html>
 <head>
   <title>{{title}}</title>
   {{> useDefaultStyle}}
 </head>
-
 <body>
   {{> header }}
 
-  <p> The weather is: {{ weather }} </p>
+  <section id='Content'>
+
+  <form action="/" method='post'>
+    <label> Enter city: </label>
+    <input type='text' name='city' required='true'>
+    <button type='submit'> Go </button>
+  </form>
+
+  </section>
 
   {{> footer}}
 </body>
-
 </html>

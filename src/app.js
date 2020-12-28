@@ -20,7 +20,7 @@ app.set('view engine', 'hbs')
 
 // Routes
 app.get('/', (req, res) => {
-  res.render('weather', { title: 'Weather app', weather: 'sunnny' })
+  res.render('home', { title: 'Weather app', weather: 'sunnny' })
 })
 
 
