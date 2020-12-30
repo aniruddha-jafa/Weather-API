@@ -2,6 +2,7 @@
 
 // imports
 const { body, check, validationResult } = require('express-validator')
+const fetch = require('node-fetch')
 
 // sanitise & validate city name
 exports.validateQuery = [
@@ -24,3 +25,26 @@ exports.validateQuery = [
       }
     }
 ]
+
+
+exports.fetchWeatherData = function(req, res, next) {
+  const preferredUnits = 'metric'
+  const cityName = req.body.city
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=
+              ${cityName}
+              &units=${preferredUnits}
+              &appid=64697ade1356a77c85131fda13e3e2f3`
+  console.log('Fetching data...')
+
+  fetch(url)
+  .then(data => data.json())
+  .then(data => {
+    if (data.cod === '404') { throw new Error('City not found') }
+
+    const weatherDescription = data.weather[0].description
+    const weatherMessage = `The weather in ${cityName} is decribed by: ${weatherDescription}`
+    res.render('home', { renderForm: true,
+                         message: weatherMessage })
+    })
+  .catch(err => next(err))
+}
