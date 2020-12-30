@@ -4,13 +4,14 @@
   "description": "",
   "main": "./src/app.js",
   "scripts": {
-    "start": "nodemon src/app.js -e js,hbs,css,json", 
+    "start": "nodemon src/app.js -e js,hbs,css,json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Aniruddha Singh Jafa",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
+    "express-validator": "^6.9.0",
     "hbs": "^4.0.1"
   }
 }
