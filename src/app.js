@@ -10,7 +10,7 @@ const hbs = require('hbs')
 const app = express()
 
 // import helper functions (self-defined)
-const { validateQuery } = require('./helperFunctions')
+const { validateQuery, fetchWeatherData } = require('./helperFunctions')
 
 // Define useful variables
 const urlEncodedParser = express.urlencoded({ extended: false })
@@ -32,10 +32,11 @@ app.get('/', (req, res) => {
 app.post('/',
   urlEncodedParser,
   validateQuery,
+  fetchWeatherData,
   (err, req, res, next) => {
     console.error(err)
     res.render('home', { renderForm: true,
-                         message: `Please try again: ${err}` })
+                         message: `Please try again, ${err.message}` })
   }
 )
 
