@@ -3,16 +3,6 @@
 // imports
 const { body, check, validationResult } = require('express-validator')
 
-// render home page
-exports.renderHomePage = function(req, res) {
-  res.render('home', {
-            title: 'Weather app',
-            weather: 'Sunny',
-            error: 'dummy variable'
-          })
-}
-
-
 // sanitise & validate city name
 exports.validateQuery = [
   check('city').exists(),

@@ -1,22 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>{{title}}</title>
-  {{> useDefaultStyle}}
-</head>
+
+{{> htmlHead }}
 <body>
   {{> header }}
-
-  <section id='Content'>
-
-  <form action="/" method='post'>
-    <label> Enter city: </label>
-    <input type='text' name='city' required='true'>
-    <button type='submit'> Go </button>
-  </form>
-
-  </section>
-
+  {{#if renderForm}}
+    {{> form }}
+  {{/if}}
+  {{ message }}
   {{> footer}}
 </body>
 </html>
