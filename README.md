@@ -20,6 +20,7 @@
 - making API requests: node-fetch
 
 :: Acknowledgements
+
 The initial inspiration for such a project (a weather API client) came from Mead & Percival's _Complete Nodejs course 3rd edition_. But unlike the app from the course, which also contains a client-side script, this app is server-based i.e. no client-side scripts are used. In particular, this project:
 - initiates the http request for the weather API from the server, not from the web browser
 - adds form sanitisation and validation
