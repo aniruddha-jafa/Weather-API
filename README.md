@@ -1,12 +1,20 @@
-# Weather app (learning mini-project)
+# What's the weather like? 
+## A back-end mini-project
 
-(to complete) 
+Main learning goals:
+- sanitise and validate a simple form in Express
+- query an API from the Express server (no client-side 'fetch' etc)
 
-Main learning goal -
+Basic functionality:
+- search form to get city name from user
+- sanitise and validate input
+- query OpenWeatherMap
+- display weather description
+- on errors, display errors message and re-render the search form
 
 
-Functionality:
-
-
-
-Tools used:
+Key tools used:
+- Node, Express
+- rendering: handlebars
+- validation: express-validator
+- API requests: node-fetch
