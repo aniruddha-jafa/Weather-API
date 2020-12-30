@@ -11,35 +11,37 @@ const app = express()
 
 // import helper functions (self-defined)
 const { validateQuery } = require('./helperFunctions')
-const { renderHomePage } = require('./helperFunctions')
 
 // Define useful variables
 const urlEncodedParser = express.urlencoded({ extended: false })
 const portToUse = 3000
-
-// Define paths for static assets
 const publicPath = path.join(__dirname, '../public')
 const partialsPath = path.join(__dirname, '../views/partials')
-app.use(express.static(publicPath))  // use to serve static assets e.g. CSS
 
 // set view engine
 hbs.registerPartials(partialsPath)
 app.set('view engine', 'hbs')
+app.use(express.static(publicPath))  // use to serve static assets e.g. CSS
 
 // Routes
-app.get('/', renderHomePage)
+app.get('/', (req, res) => {
+  res.render('home', { renderForm: true,
+                       message: '' })
+})
 
 app.post('/',
   urlEncodedParser,
   validateQuery,
-  renderHomePage,
   (err, req, res, next) => {
     console.error(err)
+    res.render('home', { renderForm: true,
+                         message: `Please try again: ${err}` })
   }
 )
 
 app.get('*', (req, res) => {
-  res.render('404', { title: 'Error 404' })
+  res.render('home', { renderForm: false,
+                       message: 'Error 404: Page not found' })
 })
 
 
