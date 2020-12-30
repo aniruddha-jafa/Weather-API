@@ -8,8 +8,8 @@ Main learning goals:
 Basic functionality:
 - search form to get city name from user
 - sanitise and validate input
-- query OpenWeatherMap
-- display weather description
+- query a weather API (e.g. OpenWeatherMap)
+- display a concise weather description for the city
 - on errors, display errors message and re-render the search form
 
 
@@ -17,4 +17,5 @@ Key tools used:
 - Node, Express
 - rendering: handlebars
 - validation: express-validator
-- API requests: node-fetch
+- weather API provided by: OpenWeatherMap
+- making API requests: node-fetch
