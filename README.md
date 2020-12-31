@@ -1,7 +1,7 @@
 # What's the weather like? 
 ## A back-end mini-project
 
-My first server-side project (!)
+December 2020 - my first server-side project (!)
 
 :: Main learning goals
 - sanitise and validate a simple form
