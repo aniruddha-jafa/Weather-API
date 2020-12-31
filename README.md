@@ -1,9 +1,11 @@
 # What's the weather like? 
 ## A back-end mini-project
 
+My first server-side project (!)
+
 :: Main learning goals
-- sanitise and validate a simple form in Express
-- query an API from the Express server (no client-side 'fetch' etc)
+- sanitise and validate a simple form
+- query an API from the server (no client-side 'fetch' etc)
 
 :: Basic functionality
 - search form to get city name from user
