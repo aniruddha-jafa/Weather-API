@@ -6,6 +6,7 @@ My first server-side project (!)
 :: Main learning goals
 - sanitise and validate a simple form
 - query an API from the server (no client-side 'fetch' etc)
+- display results on the client side
 
 :: Basic functionality
 - search form to get city name from user
@@ -33,4 +34,4 @@ The initial inspiration for such a project (a weather API client) came from Mead
 :: Ideas for improvement
 - add optional form field to specify country
 - add fallback URLs / APIs so that a larger set of cities can be covered
-- write tests
+- add tests
