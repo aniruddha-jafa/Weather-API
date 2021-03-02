@@ -1,7 +1,7 @@
-# What's the weather like? :sunny: :snowflake: :umbrella:
+# Weather API :sunny :umbrella:
 ## A back-end mini-project
 
-December 2020 - my first server-side & javascript project
+December 2020 - first Node.js project
 
 :: Main learning goals
 - sanitise and validate a simple form
