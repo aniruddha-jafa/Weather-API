@@ -1,4 +1,4 @@
-# Weather API :sunny :umbrella:
+# Weather API :sunny: :umbrella:
 ## A back-end mini-project
 
 December 2020 - first Node.js project
